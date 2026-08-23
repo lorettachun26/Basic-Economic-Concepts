@@ -1,0 +1,6 @@
+{
+  "name": "HKDSE Economics Mastery: Basic Economic Concepts",
+  "description": "An interactive HKDSE Economics learning platform covering Scarcity, Opportunity Cost, Competition, Free vs Economic Goods, and Positive vs Normative Statements, with authentic DSE past paper exercises, interactive simulations, and official HKEAA marking systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
