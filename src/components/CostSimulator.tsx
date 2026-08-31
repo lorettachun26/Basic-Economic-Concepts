@@ -662,16 +662,36 @@ export const CostSimulator: React.FC = () => {
 
               <div className="pt-2 border-t border-slate-700">
                 <div className="text-[11px] text-slate-400 font-bold uppercase tracking-wider">
-                  3. HKDSE Definition & Formula:
+                  3. HKDSE Definition & Cost Formulas:
                 </div>
-                <div className="bg-slate-950 p-3 rounded-lg text-xs font-mono text-emerald-400 border border-slate-800 mt-1 space-y-1">
+                <div className="bg-slate-950 p-3 rounded-lg text-xs font-mono text-emerald-400 border border-slate-800 mt-1 space-y-1.5">
                   <div className="font-bold text-white">Opportunity Cost = Highest-valued option forgone</div>
                   <div>= Value of forgoing [{highestForgoneItem?.name}]</div>
+                  <div className="pt-1 border-t border-slate-800 text-amber-300">
+                    Full Cost = Monetary Cost + Non-monetary Cost only
+                  </div>
                   {selectedItem.price < currentScenario.budget && (
                     <div className="text-slate-300 text-[11px]">
                       (+ You have ${currentScenario.budget - selectedItem.price} left over)
                     </div>
                   )}
+                </div>
+              </div>
+
+              {/* Dedicated Implicit Cost Box */}
+              <div className="pt-2 border-t border-slate-700">
+                <div className="text-[11px] text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  Implicit Cost (隱性成本) Factor Box:
+                </div>
+                <div className="bg-slate-950/80 p-2.5 rounded-lg border border-emerald-500/30 text-[11px] text-slate-300 mt-1 space-y-1">
+                  <p>
+                    <strong className="text-white">Definition:</strong> Forgone return/income from using <em>self-owned resources</em> without direct cash outflow.
+                  </p>
+                  <p className="text-slate-400">
+                    • <em>Time & Effort:</em> Queuing or shopping time = forgone leisure / work wage.<br />
+                    • <em>Self-owned funds:</em> Cash spent = forgone bank deposit interest.
+                  </p>
                 </div>
               </div>
             </div>
@@ -695,17 +715,20 @@ export const CostSimulator: React.FC = () => {
           <div className="bg-white border-l-4 border-slate-900 border-r border-t border-b border-slate-200 rounded-r-xl p-4 text-xs text-slate-800 space-y-2 shadow-xs">
             <h5 className="font-bold text-slate-900 flex items-center gap-1.5 uppercase tracking-wider text-[11px]">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              3 Golden Rules for HKDSE Opportunity Cost:
+              HKDSE Opportunity Cost Golden Rules:
             </h5>
             <div className="space-y-1.5 text-slate-700 text-[11px] leading-relaxed">
               <p>
-                1. <strong>Only the 2nd choice counts:</strong> Cost is the value of the single highest-valued option forgone.
+                1. <strong>Opportunity Cost:</strong> Value of the highest-valued option forgone (2nd choice).
               </p>
               <p>
-                2. <strong>Cost changes ONLY when:</strong> The value of the <em>2nd choice</em> changes, or the purchase price changes.
+                2. <strong>Full Cost Equation:</strong> Full Cost = Monetary Cost + Non-monetary Cost only.
               </p>
               <p>
-                3. <strong>Enjoying the chosen item less:</strong> If the item you bought breaks or you don't like it later, its opportunity cost remains <strong>UNCHANGED</strong>.
+                3. <strong>Implicit Cost:</strong> Forgone return of self-owned resources (salary, rent, interest).
+              </p>
+              <p>
+                4. <strong>Chosen Item Enjoyment:</strong> If the item you bought breaks or you like it less later, opportunity cost remains <strong>UNCHANGED</strong>.
               </p>
             </div>
           </div>

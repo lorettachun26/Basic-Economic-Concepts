@@ -75,14 +75,19 @@ export const CONCEPTS_DATA: ConceptItem[] = [
         examTip: 'Memorize the exact standard definition: "Opportunity cost is the highest-valued option forgone".'
       },
       {
-        title: 'Full Cost = Explicit (Monetary) + Implicit (Non-monetary)',
-        description: 'Opportunity cost includes out-of-pocket expenses (tuition, purchase price) PLUS implicit costs (forgone wage/salary, forgone rental value, forgone leisure).',
-        examTip: 'Living in your own flat is NOT costless! The opportunity cost is the forgone rental income or interest from selling the flat.'
+        title: 'Full Cost = Monetary Cost + Non-monetary Cost only (全面成本 = 金錢成本 + 非金錢成本)',
+        description: 'Full cost consists strictly of two components: (1) Monetary cost (direct out-of-pocket money paid, such as price or tuition), and (2) Non-monetary cost (time spent, effort, waiting in queue, or sacrificed leisure).',
+        examTip: 'Remember: Full cost = monetary cost + non-monetary cost only. Consuming a "free" good still has non-monetary time cost!'
+      },
+      {
+        title: 'Implicit Cost (隱性成本 - Forgone Return of Self-Owned Resources)',
+        description: 'Implicit cost is the forgone income or return from using self-owned resources in their best alternative use without direct cash outflow. Examples: forgone salary when studying or starting a business, forgone rental income from using a self-owned shop/flat, and forgone bank interest from investing personal savings.',
+        examTip: 'Using your own shop or living in your own flat is NOT cost-free! The implicit cost is the forgone rental income you could have earned by leasing it to others.'
       },
       {
         title: 'When Does Opportunity Cost Change? (成本何時改變？)',
-        description: 'Opportunity cost changes ONLY IF: (1) The value of the highest-valued forgone option changes, OR (2) A new alternative replaces the highest-valued forgone option.',
-        examTip: 'A change in the value of the CHOSEN option does NOT change its opportunity cost! (e.g. if the meal you bought tastes bad, your opportunity cost remains unchanged).'
+        description: 'Opportunity cost changes ONLY IF: (1) The value of the highest-valued forgone option changes, OR (2) A new alternative replaces the highest-valued forgone option, OR (3) The monetary price paid changes.',
+        examTip: 'A change in the value or enjoyment of the CHOSEN option does NOT change its opportunity cost! (e.g. if the meal you bought tastes bad, your opportunity cost remains unchanged).'
       },
       {
         title: 'Sunk Costs are Irrelevant (沉沒成本非成本)',
@@ -132,6 +137,8 @@ export const CONCEPTS_DATA: ConceptItem[] = [
     ],
     goldenPhrases: [
       'Opportunity cost is the highest-valued option forgone in making a choice.',
+      'Full cost = monetary cost + non-monetary cost only.',
+      'Implicit cost is the forgone return of self-owned resources.',
       'No choice, no cost.',
       'Cost changes only when the value of the highest-valued forgone option changes.',
       'A change in the enjoyment/value of the selected option does not affect its opportunity cost.'

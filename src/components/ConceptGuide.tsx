@@ -82,7 +82,7 @@ export const ConceptGuide: React.FC<Props> = ({ onSelectPracticeConcept }) => {
               Core Conceptual Framework
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {activeConcept.keyPoints.map((kp, idx) => (
                 <div
                   key={idx}
@@ -106,6 +106,72 @@ export const ConceptGuide: React.FC<Props> = ({ onSelectPracticeConcept }) => {
               ))}
             </div>
           </div>
+
+          {/* Dedicated Cost Decomposition & Implicit Cost Boxes */}
+          {activeConcept.id === 'opportunity-cost' && (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              {/* Box 1: Full Cost Equation */}
+              <div className="p-5 rounded-xl bg-slate-900 text-white border border-slate-800 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-emerald-500/20 text-emerald-300 rounded border border-emerald-500/30">
+                    HKDSE Cost Formula
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">Component Breakdown</span>
+                </div>
+                <h4 className="text-sm font-bold text-white">
+                  Full Cost = Monetary Cost + Non-Monetary Cost only
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-1">
+                  <div className="p-3 bg-slate-800 rounded-lg border border-slate-700 space-y-1">
+                    <span className="font-bold text-emerald-400 block">1. Monetary Cost (金錢成本)</span>
+                    <p className="text-slate-300 text-[11px] leading-relaxed">
+                      Direct out-of-pocket money paid to purchase the good or service (e.g. tuition fees, ticket price, textbook expenses).
+                    </p>
+                  </div>
+                  <div className="p-3 bg-slate-800 rounded-lg border border-slate-700 space-y-1">
+                    <span className="font-bold text-amber-300 block">2. Non-Monetary Cost (非金錢成本)</span>
+                    <p className="text-slate-300 text-[11px] leading-relaxed">
+                      Value of sacrificed time, queuing in line, effort, discomfort, or forgone leisure activities.
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-800 text-[11px] text-slate-300">
+                  💡 <strong>Exam Application:</strong> When attending a free concert, Monetary Cost = $0, but Non-Monetary Time Cost &gt; $0. Hence Full Cost is <em>never</em> zero.
+                </div>
+              </div>
+
+              {/* Box 2: Implicit Cost Dedicated Box */}
+              <div className="p-5 rounded-xl bg-slate-50 border-2 border-emerald-500/30 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded border border-emerald-200">
+                    Dedicated Framework
+                  </span>
+                  <span className="text-xs text-slate-500 font-mono">Resource Factor Analysis</span>
+                </div>
+                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                  Implicit Cost (隱性成本) — Self-Owned Resources
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  The forgone return/income from using <strong>self-owned resources</strong> in their highest-valued alternative use without direct out-of-pocket cash outflow:
+                </p>
+                <div className="space-y-2 text-xs">
+                  <div className="flex items-start gap-2 bg-white p-2.5 rounded border border-slate-200 shadow-2xs">
+                    <span className="font-mono text-emerald-700 font-bold shrink-0">• Own Labour:</span>
+                    <span className="text-slate-700 text-[11px]">Forgone salary/wage when studying full-time at university or starting a private venture.</span>
+                  </div>
+                  <div className="flex items-start gap-2 bg-white p-2.5 rounded border border-slate-200 shadow-2xs">
+                    <span className="font-mono text-emerald-700 font-bold shrink-0">• Own Property:</span>
+                    <span className="text-slate-700 text-[11px]">Forgone rental income from operating a business in a self-owned shop or living in own flat.</span>
+                  </div>
+                  <div className="flex items-start gap-2 bg-white p-2.5 rounded border border-slate-200 shadow-2xs">
+                    <span className="font-mono text-emerald-700 font-bold shrink-0">• Own Capital:</span>
+                    <span className="text-slate-700 text-[11px]">Forgone bank interest income from using personal savings instead of keeping them deposited.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Interactive Concept Flow Diagram for Topic */}
           {activeConcept.id === 'scarcity' && (

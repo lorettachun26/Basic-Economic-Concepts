@@ -20,10 +20,10 @@ const REVISION_CARDS: RevisionCard[] = [
   },
   {
     id: 'opp-cost',
-    topic: '2. Opportunity Cost',
-    goldenRule: 'Opportunity Cost = Highest-valued option forgone. When spending $1,000 on Item A instead of Item B ($1,000), Item C ($1,000), or Item D ($1,000), the cost is ONLY forgoing Item B (the single highest-valued alternative sacrificed, NOT B+C+D combined).',
-    dsePitfall: '1. A change in the value/enjoyment of the CHOSEN option does NOT change its opportunity cost!\n2. Choices #3, #4, and #5 are NOT added to the cost because $1,000 can only buy one alternative.\n3. Sunk costs (unrecoverable past expenses) are never part of opportunity cost.',
-    keywords: ['Opportunity cost = highest-valued option forgone', '$1000 single choice', 'chosen option value unchanged', 'not added together']
+    topic: '2. Opportunity Cost & Full Cost',
+    goldenRule: 'Opportunity Cost = Highest-valued option forgone. Full Cost = Monetary Cost + Non-monetary Cost only. Implicit Cost represents the forgone return from employing self-owned resources (e.g. forgone salary, forgone rent from self-owned shop/flat, forgone interest) without direct cash outflow.',
+    dsePitfall: '1. Full cost = monetary cost + non-monetary cost only (consuming free items still involves non-monetary time cost).\n2. Implicit costs are NOT zero: using self-owned property or self-owned capital has an opportunity cost (forgone rental income / bank interest).\n3. A change in the value/enjoyment of the CHOSEN option does NOT change its opportunity cost!\n4. Choices #3, #4, and #5 are NOT added together.',
+    keywords: ['Opportunity cost = highest-valued option forgone', 'Full cost = monetary cost + non-monetary cost only', 'Implicit cost (self-owned resources)', 'chosen option value unchanged']
   },
   {
     id: 'goods',
